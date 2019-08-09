@@ -7,8 +7,10 @@ let colors = [
     "rgb(255, 0, 255)",
 ];
 
+
+
 let squares = document.querySelectorAll(".square");
-let pickedColor = colors[3];
+let pickedColor = pickcolor();
 let colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
 
@@ -42,3 +44,8 @@ function changeColors(color){
     }
 
 }
+
+function pickcolor(){
+    let random = Math.floor(Math.random() * colors.length);
+    return colors[random];
+} 
